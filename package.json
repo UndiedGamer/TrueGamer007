@@ -1,0 +1,17 @@
+{
+  "name": "truegamer007",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^13.0.0-dev.2675b08.1627603447",
+    "got": "^11.8.2",
+    "querystring": "^0.2.1"
+  }
+}
