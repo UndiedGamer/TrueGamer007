@@ -4,6 +4,7 @@ const client = new Discord.Client({
 	intents: ['GUILDS', 'GUILD_MEMBERS', 'GUILD_MESSAGES', 'GUILD_BANS'],
 	partials: ['CHANNEL', 'GUILD_MEMBER', 'MESSAGE', 'REACTION', 'USER']
 });
+const { token } = require('./config.json')
 client.commands = new Discord.Collection()
 const commandFolders = fs.readdirSync('./commands');
 
@@ -31,4 +32,4 @@ for (const file of eventFiles) {
 		client.on(event.name, (...args) => event.execute(...args, client));
 	}
 }
-client.login(process.env.TOKEN)
+client.login(token)
