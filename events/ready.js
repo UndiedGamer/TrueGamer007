@@ -13,6 +13,6 @@ module.exports = {
 				description: 'Vote for someone',
 			}
 		];
-		await client.guilds.cache.get('859287138364030977').commands.set(data);
+		await client.guilds.cache.get('569462441851879454').commands.set(data);
 	}
 }
