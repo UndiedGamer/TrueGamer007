@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const fs = require('fs');
-const { token } = require('./config.json')
 const client = new Discord.Client({
 	intents: ['GUILDS', 'GUILD_MEMBERS', 'GUILD_MESSAGES', 'GUILD_BANS'],
 	partials: ['CHANNEL', 'GUILD_MEMBER', 'MESSAGE', 'REACTION', 'USER']
@@ -32,4 +31,4 @@ for (const file of eventFiles) {
 		client.on(event.name, (...args) => event.execute(...args, client));
 	}
 }
-client.login(token)
+client.login(process.env.TOKEN)
