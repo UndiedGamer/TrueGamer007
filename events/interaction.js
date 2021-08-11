@@ -31,24 +31,24 @@ module.exports = {
 		if (interaction.isSelectMenu()) {
 			if (interaction.customId === 'votemenu'){
 				if (interaction.values[0] === 'ameya') {
-					let currentVotes = client.votes.get('551758246701170688')
+					let currentVotes = parseInt(client.votes.get('551758246701170688'))
 					client.votes.set('551758246701170688', currentVotes++)
-					await interaction.update(`Ameya now has ${currentVotes++}`)
+					await interaction.update(`Ameya now has ${currentVotes++} votes`)
 				}
 				if (interaction.values[0] === 'chick') {
-					let currentVotes = client.votes.get('564468550727761920')
+					let currentVotes = parseInt(client.votes.get('564468550727761920'))
 					client.votes.set('564468550727761920', currentVotes++)
-					await interaction.update(`Ameya now has ${currentVotes++}`)
+					await interaction.update(`Undied now has ${currentVotes++} votes`)
 				}
 				if (interaction.values[0] === 'simp') {
-					let currentVotes = client.votes.get('691916925030367243')
+					let currentVotes = parseInt(client.votes.get('691916925030367243'))
 					client.votes.set('691916925030367243', currentVotes++)
-					await interaction.update(`Ameya now has ${currentVotes++}`)
+					await interaction.update(`Jat now has ${currentVotes++} votes`)
 				}
 				if (interaction.values[0] === 'thicc') {
-					let currentVotes = client.votes.get('574877426035982346')
+					let currentVotes = parseInt(client.votes.get('574877426035982346'))
 					client.votes.set('574877426035982346', currentVotes++)
-					await interaction.update(`Ameya now has ${currentVotes++}`)
+					await interaction.update(`Shroud now has ${currentVotes++} votes`)
 				}
 			}
 		}
