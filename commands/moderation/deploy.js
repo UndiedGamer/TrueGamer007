@@ -7,6 +7,7 @@ module.exports = {
 			client.votes.set('574877426035982346', 0) // Shroud
 			client.votes.set('564468550727761920', 0) // Undied
 			client.votes.set('691916925030367243', 0) // Jat
+			message.reply('Successfully set votes to 0')
 		}
 		catch (err) {
 			console.error(err)
