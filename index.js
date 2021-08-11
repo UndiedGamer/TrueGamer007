@@ -5,6 +5,7 @@ const client = new Discord.Client({
 	partials: ['CHANNEL', 'GUILD_MEMBER', 'MESSAGE', 'REACTION', 'USER']
 });
 client.commands = new Discord.Collection()
+client.votes = new Discord.Collection()
 const commandFolders = fs.readdirSync('./commands');
 
 for (const folder of commandFolders) {

@@ -31,16 +31,24 @@ module.exports = {
 		if (interaction.isSelectMenu()) {
 			if (interaction.customId === 'votemenu'){
 				if (interaction.values[0] === 'ameya') {
-				await interaction.update('You voted for Ameya', { ephermal: true })
+					const currentVotes = client.values.get('551758246701170688')
+					client.votes.set('551758246701170688', currentVotes++)
+					await interaction.update(`Ameya now has ${currentVotes++}`)
 				}
 				if (interaction.values[0] === 'chick') {
-					await interaction.update('You voted for Undied', { ephermal: true })
+					const currentVotes = client.values.get('564468550727761920')
+					client.votes.set('564468550727761920', currentVotes++)
+					await interaction.update(`Ameya now has ${currentVotes++}`)
 				}
 				if (interaction.values[0] === 'simp') {
-					await interaction.update('You voted for Jat', { ephermal: true })
+					const currentVotes = client.values.get('691916925030367243')
+					client.votes.set('691916925030367243', currentVotes++)
+					await interaction.update(`Ameya now has ${currentVotes++}`)
 				}
 				if (interaction.values[0] === 'thicc') {
-					await interaction.update('You voted for Shroud', { ephermal: true })
+					const currentVotes = client.values.get('574877426035982346')
+					client.votes.set('574877426035982346', currentVotes++)
+					await interaction.update(`Ameya now has ${currentVotes++}`)
 				}
 			}
 		}
