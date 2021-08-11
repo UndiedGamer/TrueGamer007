@@ -31,16 +31,16 @@ module.exports = {
 		if (interaction.isSelectMenu()) {
 			if (interaction.customId === 'votemenu'){
 				if (interaction.values[0] === 'ameya') {
-				await interaction.followUp('You voted for Ameya', { ephermal: true })
+				await interaction.update('You voted for Ameya', { ephermal: true })
 				}
 				if (interaction.values[0] === 'chick') {
-					await interaction.followUp('You voted for Undied', { ephermal: true })
+					await interaction.update('You voted for Undied', { ephermal: true })
 				}
 				if (interaction.values[0] === 'simp') {
-					await interaction.followUp('You voted for Jat', { ephermal: true })
+					await interaction.update('You voted for Jat', { ephermal: true })
 				}
 				if (interaction.values[0] === 'thicc') {
-					await interaction.followUp('You voted for Shroud', { ephermal: true })
+					await interaction.update('You voted for Shroud', { ephermal: true })
 				}
 			}
 		}
