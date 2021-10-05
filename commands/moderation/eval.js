@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 module.exports = {
 	name: 'eval',
 	execute: async (message, args, client) => {
-		if (!message.author.id === "564468550727761920") return message.reply("You cannot use this command!");
+		if (message.author.id !== "564468550727761920") return message.reply("You cannot use this command!");
 		const clean = (taxt) => {
 			if (typeof taxt === "string") {
 				return taxt
