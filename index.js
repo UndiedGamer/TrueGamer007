@@ -1,9 +1,12 @@
 const Discord = require('discord.js');
 const fs = require('fs');
+require('dotenv').config();
+
 const client = new Discord.Client({
 	intents: ['GUILDS', 'GUILD_MEMBERS', 'GUILD_MESSAGES', 'GUILD_BANS'],
 	partials: ['CHANNEL', 'GUILD_MEMBER', 'MESSAGE', 'REACTION', 'USER']
 });
+
 client.commands = new Discord.Collection()
 client.votes = new Discord.Collection()
 const commandFolders = fs.readdirSync('./commands');
