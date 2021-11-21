@@ -11,7 +11,7 @@ module.exports = {
       const url = uriRegex.exec(message.content)[0].replace("www.", "");
       if (isScam(url)) {
         if (message.member.kickable) {
-          message.member.kick();
+         // message.member.kick();
         }
         message.delete();
         const embed = new MessageEmbed()
