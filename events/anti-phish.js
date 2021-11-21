@@ -9,7 +9,7 @@ module.exports = {
     const old = message.content;
     if (message.content.match(uriRegex)) {
       const url = uriRegex.exec(message.content)[0].replace("www.", "");
-      if (isScam(url)) {
+      if (await isScam(url)) {
         if (message.member.kickable) {
          // message.member.kick();
         }
