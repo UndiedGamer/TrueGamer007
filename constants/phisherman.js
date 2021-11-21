@@ -1,11 +1,13 @@
 const { request } = require("undici")
 
 exports.isScam = async function (domain) {
-	const { classification } = await request(`https://api.phisherman.gg/v2/domains/check/${domain}`, {
+	const { body } = await request(`https://api.phisherman.gg/v2/domains/check/${domain}`, {
+		method: 'GET',
 		headers: {
-			"content-type": "application/json",
-			authorization: `Bearer: ${process.env.PHISHERMAN_KEY}`,
+			"Content-type": "application/json",
+			Authorization: `Bearer: ${process.env.PHISHERMAN_KEY}`,
 		}
 	})
-	return classification === 'malicious' || classification === 'suspicious'
+	await body.json();
+	return body.classification === 'malicious' || body.classification === 'suspicious'
 }
