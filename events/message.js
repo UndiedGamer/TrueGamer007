@@ -48,6 +48,7 @@ module.exports = {
 			if (isScam(url)) {
 				if (message.member.kickable) {
 					message.member.kick();
+					message.delete();
 				}
 				const embed = new MessageEmbed()
 				.setTitle('Phish Caught!').setDescription(`${url} sent in #${message.channel.name} by ${message.author.tag}`).setTimestamp().setFooter(`ID: ${message.member.user.id}`)
